@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React from 'react'
+import { BrowserRouter,Route, Switch } from 'react-router-dom'
+import { ToastContainer, toast } from 'react-toastify';
+import Header from './comp/Header'
+import Footer from './comp/Footer'
+import Login from './Login'
+import Admin from './admin'
+import Fcaulty from './faculty'
+import Student from './student'
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+    <BrowserRouter>
+    <>
+        <Header />
+          <div className='conatiner'>
+            <Switch>
+              <Route exact path="/" component={Login} />
+              <Route exact path="/Admin/:x" component={Admin}/>
+              <Route exact path="/Fcaulty/:x" component={Fcaulty}/>
+              <Route exact path="/Student/:x" component={Student}/>
+            </Switch>
+          </div>
+        <Footer />
+        <ToastContainer />
+        </>
+    </BrowserRouter>
+    </>
+  )
 }
 
-export default App;
+export default App

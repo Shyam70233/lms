@@ -1,0 +1,89 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+*{
+    box-sizing: border-box;
+    outline: 0;
+    text-decoration: none;
+    border: 0;
+    list-style: none;
+}
+button, input,a{
+    padding: 10px;
+}
+header{
+    background-color: black;
+    color:white;
+    display: flex;
+    justify-content: space-around;
+    line-height: 10vh;
+}
+header h1{
+    margin: 0;
+    padding: 0;
+}
+header a{
+    color: white;
+}
+header a:hover{
+    color: antiquewhite;
+}
+footer{
+    background-color: black;
+    color:white;
+    display: flex;
+    justify-content: space-around;
+}
+.conatiner{
+    min-height: 80vh;
+    background-color: aquamarine;
+}
+.loginform{
+    margin: 2%;
+    padding: 2%;
+    background-color: rgb(255, 255, 255);
+    display: inline-table;
+    box-shadow: 0 10px 10px 10px pink;
+    
+
+}
+.loginform input,
+.loginform select,
+.loginform button {
+    display: block;
+    width: 100%;
+}
+.loginform input{
+    background-color: rgb(231, 225, 225);
+    margin: 2%;
+}
+.loginform button{
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+}
+table{
+    width: 100%;
+   
+    background-color: white;
+    color: black;
+}
+thead{
+    position: sticky;
+    top: 0;
+    background-color: black;
+    color: white;
+}
+tbody{
+    background-color: silver; 
+    text-align: center;
+}
+.wrapper{
+    padding-inline: 2%;
+}
+.overflow{
+    height: 60vh;
+    overflow: auto;
+}
